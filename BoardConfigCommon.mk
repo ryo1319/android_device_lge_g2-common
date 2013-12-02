@@ -69,6 +69,7 @@ WIFI_DRIVER_FW_PATH_AP      := "/system/etc/firmware/fw_bcmdhd_apsta.bin"
 
 BOARD_EGL_CFG := device/lge/g2-common/egl.cfg
 
+TARGET_QCOM_DISPLAY_VARIANT := mdss
 USE_OPENGL_RENDERER := true
 VSYNC_EVENT_PHASE_OFFSET_NS := 7500000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 5000000
