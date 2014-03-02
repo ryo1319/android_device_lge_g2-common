@@ -29,7 +29,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.g2.rc:root/init.g2.rc \
     $(LOCAL_PATH)/init.g2.usb.rc:root/init.g2.usb.rc \
     $(LOCAL_PATH)/ueventd.g2.rc:root/ueventd.g2.rc \
-    $(LOCAL_PATH)/fstab.g2:root/fstab.g2
+    $(LOCAL_PATH)/ueventd.goldfish.rc:root/ueventd.goldfish.rc \
+    $(LOCAL_PATH)/fstab.g2:root/fstab.g2 \
+    $(LOCAL_PATH)/fstab.goldfish:root/fstab.goldfish \
 
 
 PRODUCT_COPY_FILES += \
