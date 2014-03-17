@@ -84,8 +84,6 @@ PRODUCT_PACKAGES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
-    nfc_nci.g2 \
-    NfcNci \
     Tag \
     com.android.nfc_extras
 
@@ -106,14 +104,17 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.sf.lcd_density=480 \
-	ro.opengles.version=196608
+	ro.opengles.version=196608 \
+	ro.loki_enabled=1
 
 # Audio Configuration
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.audio.handset.mic=digital \
-	persist.audio.fluence.mode=endfire \
-	af.resampler.quality=4
-
+	persist.audio.fluence.voicecall=true \
+	persist.audio.dualmic.config=endfire \
+	af.resampler.quality=4 \
+	audio.offload.buffer.size.kb=32 \
+	audio.offload.gapless.enabled=false \
+	av.offload.enable=true
 
 # Do not power down SIM card when modem is sent to Low Power Mode.
 PRODUCT_PROPERTY_OVERRIDES += \
