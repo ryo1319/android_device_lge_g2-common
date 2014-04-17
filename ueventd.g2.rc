@@ -157,14 +157,14 @@
 /dev/i2c-0                0666  root      root
 # LGE_CHANGE_E, [NFC][sungwook.ahn@lge.com], 2013-03-9, NFC Bring up
 # LGE_CHANGE_S, 20130307, LGE-FeliCa@lge.com
-/dev/felica               0660  mfc       system
-/dev/felica_cen           0464  mfc       felicalock
-/dev/felica_pon           0660  mfc       system
-/dev/felica_rfs           0440  mfc       mfc
-/dev/felica_rws           0440  mfc       mfc
-/dev/ttyHSL2              0666  mfc       system
-/dev/i2c-0                0666  mfc       system
-/dev/felica_cal           0666  mfc       mfc
+/dev/felica               0666  root      root
+/dev/felica_cen           0666  root      root
+/dev/felica_pon           0666  root      root
+/dev/felica_rfs           0444  root      root
+/dev/felica_rws           0444  root      root
+/dev/ttyHSL2              0666  root      root
+/dev/i2c-0                0666  root      root
+/dev/felica_cal           0666  root      root
 /dev/felica_test          0666  root      root
 # LGE_CHANGE_S, 20130307, LGE-FeliCa@lge.com
 # LGE_CHANGE_S, [modemBSP][jin.park@lge.com], 2013-03-19, LGE MOCA driver
