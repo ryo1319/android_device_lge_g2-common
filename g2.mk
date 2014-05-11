@@ -224,9 +224,11 @@ PRODUCT_COPY_FILES += \
 
 # This hw ships locked, work around it with loki
 PRODUCT_PACKAGES += \
-        loki.sh \
-        loki_patch \
-        loki_flash
+        loki.sh 
+# Loki tool
+# there is loki source in bootable/recovery/loki 
+PRODUCT_PACKAGES += \
+    loki_tool_static
 
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 
@@ -247,11 +249,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
         ro.vendor.extension_library=/vendor/lib/libqc-opt.so
-
-# Loki tool
-# there is loki source in bootable/recovery/loki 
-PRODUCT_PACKAGES += \
-    loki_tool_static
 
 # Disregard the firmware, go straight for the confs...
 #$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4335/device-bcm.mk)
