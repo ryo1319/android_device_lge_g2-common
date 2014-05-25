@@ -145,6 +145,3 @@ MAX_EGL_CACHE_SIZE := 2048*1024
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
-#AOJP Common
-$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
-
