@@ -71,7 +71,6 @@ PRODUCT_COPY_FILES += \
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config \
     $(LOCAL_PATH)/gps.conf:system/etc/gps.conf
 
 PRODUCT_PACKAGES += \
@@ -224,11 +223,9 @@ PRODUCT_COPY_FILES += \
 
 # This hw ships locked, work around it with loki
 PRODUCT_PACKAGES += \
-        loki.sh 
-# Loki tool
-# there is loki source in bootable/recovery/loki 
-PRODUCT_PACKAGES += \
-    loki_tool_static
+        loki.sh \
+        loki_tool \
+        recovery-transform.sh
 
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 
@@ -255,7 +252,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 $(call inherit-product-if-exists, hardware/qcom/msm8x74/msm8x74.mk)
-
-#AOJP Common
-$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
-
