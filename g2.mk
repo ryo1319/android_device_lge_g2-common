@@ -252,3 +252,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
 
 $(call inherit-product-if-exists, hardware/qcom/msm8x74/msm8x74.mk)
+
+#AOJP Common
+$(call inherit-product-if-exists, vendor/aojp/config/aojp.mk)
